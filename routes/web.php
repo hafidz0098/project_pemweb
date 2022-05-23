@@ -64,9 +64,4 @@ Route::group(['middleware' => 'revalidate'], function () {
     Route::get('/dashboard/pelanggan-sukses', 'PelangganController@showSukses')->middleware('auth');
     Route::get('/dashboard/pelanggan-gagal', 'PelangganController@showGagal')->middleware('auth');
     Route::resource('/dashboard/pelanggan-pending', 'PelangganController')->middleware('auth');
-
-    Route::resource('/dashboard/peserta-sukses', 'PesertaSuksesController')->middleware('admin');
-
-    Route::resource('/dashboard/peserta-gagal', 'PesertaGagalController')->middleware('admin');
-
 });
